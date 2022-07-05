@@ -1,0 +1,32 @@
+{
+  "type" : "object",
+  "properties" : {
+    "creditDept" : {
+      "type" : "number"
+    },
+    "limitCreditCard" : {
+      "type" : "number"
+    },
+    "password" : {
+      "type" : "string"
+    },
+    "cardDept" : {
+      "type" : "number"
+    },
+    "birthMonth" : {
+      "type" : "integer"
+    },
+    "balance" : {
+      "type" : "number"
+    },
+    "birthYear" : {
+      "type" : "integer"
+    },
+    "birthdDay" : {
+      "type" : "integer"
+    },
+    "tcNo" : {
+      "type" : "integer"
+    }
+  }
+}

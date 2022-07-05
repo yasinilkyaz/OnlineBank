@@ -1,0 +1,22 @@
+[
+  {
+    "birthMonth": 12,
+    "password": "yas",
+    "limitCreditCard": 1000.0,
+    "balance": 1200.0,
+    "birthYear": 1995,
+    "tcNo": "12312312312",
+    "birthdDay": 12,
+    "creditDept": 100.0
+  },
+  {
+    "birthMonth": 5,
+    "password": "468ya",
+    "limitCreditCard": 5000.0,
+    "balance": 5000.0,
+    "birthYear": 1995,
+    "tcNo": "10110111110",
+    "birthdDay": 5,
+    "creditDept": 0.0
+  }
+]
