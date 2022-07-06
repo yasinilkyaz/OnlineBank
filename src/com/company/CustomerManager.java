@@ -26,9 +26,9 @@ public class CustomerManager {
         Customer customer2 = new Customer("10110111110",5,5,1995,"468ya",5000,1000,5000,0);
         writeJson(customer2);
     }
-    public static void newUser () {
-        customerList.add(new Customer("null",0,0,0,"null",0,0,0,0));
-        int a=customerList.size()-1;
+    public void newUser () {
+
+
         String tcNo = "";
         int tcNoControl = 1;
         int birthdDay = 0;
@@ -49,18 +49,29 @@ public class CustomerManager {
             tcNo = inp.nextLine();
             
             int numberOfCharactersTcNo=tcNo.length();
+
             if(numberOfCharactersTcNo==11){
                 int count =0;
-                for(int i=0;i<10;i++){
-                    if(tcNo.charAt(i)==i){
-                        count++;
+                for(int i=0;i<numberOfCharactersTcNo;i++){
+                    char a=tcNo.charAt(i);
+
+                    int b=Character.getNumericValue(a);
+
+                    for (int j=0;j<10;j++) {
+
+                        if (b == j) {
+                            count++;
+
+
+                            if (count == numberOfCharactersTcNo) {
+
+                                tcNoControl++;
+
+                            }
+                        }
                     }
                 }
-                if(count==11){
-                    customerList.get(a).setTcNo
-                    tcNoControl++;
 
-                }
             }else {
                 System.out.println("Tekrar deneyiniz");
             }
@@ -123,8 +134,9 @@ public class CustomerManager {
         creditDept=inp.nextDouble();
 
 
-
-
+        Customer customer=new Customer(tcNo,birthdDay,birthMonth,birthYear,password,balance,cardDept,limitCreditCard,creditDept);
+        writeJson(customer);
+        System.out.println("Bilgileriniz Kaydedildi");
 
     }
     public static boolean controlPassword(String password, int birthdDay, int birthMonth, int birthYear){
@@ -148,7 +160,7 @@ public class CustomerManager {
     }
 
 
-    private void writeJson(Customer customer) {
+    private static void writeJson(Customer customer) {
 
         JSONObject customerDetails = new JSONObject();
         customerDetails.put("tcNo", customer.getTcNo());

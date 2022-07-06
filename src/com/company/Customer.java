@@ -25,6 +25,10 @@ public class Customer {
         this.creditDept = creditDept;
     }
 
+    public Customer() {
+
+    }
+
     public String getTcNo() {
         return tcNo;
     }
